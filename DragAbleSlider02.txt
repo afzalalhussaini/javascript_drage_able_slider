@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drage Able Slider</title>
+</head>
+<body>
+    <style>
+        .drage-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aqua;
+            width: 100%;
+            height: 600px;
+        }
+        .slie01{
+            width: 250px;
+            height: 250px;
+            text-align: center;
+            background-color: aliceblue;
+            margin-right: 20px;
+            border-radius: 5px;
+        
+        }
+        .slie02{
+            width: 250px;
+            height: 250px;
+            text-align: center;
+            background-color: aliceblue;
+            margin-right: 20px;
+            border-radius: 5px;
+
+        }
+        .slie03{
+            width: 250px;
+            height: 250px;
+            text-align: center;
+            background-color: aliceblue;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+        .slie04{
+            width: 250px;
+            height: 250px;
+            text-align: center;
+            background-color: aliceblue;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+        .image{
+            width: 250px;
+            height: 250px;
+            border-radius: 5px;
+            visibility: hidden;
+            
+        }
+        .imageactive{
+            visibility: visible;
+            cursor: pointer;
+        }
+    </style>
+    <div class="drage-container">
+        <div class="slie01 slide">
+            slide01
+            <img class="image imageactive" src="Afzal-cheema.jpg" alt="" srcset="">
+        </div>
+        <div class="slie02 slide">
+            slide02
+            <img class="image" src="Afzal-cheema.jpg" alt="" srcset="">
+        </div>
+        <div class="slie03 slide">
+            slide03
+            <img class="image" src="Afzal-cheema.jpg" alt="" srcset="">
+        </div>
+        <div class="slie04 slide">
+            slide04
+            <img class="image" src="Afzal-cheema.jpg" alt="" srcset="">
+        </div>
+    </div>
+
+
+    <script>
+        let slides = document.querySelectorAll(".slide");
+        let images = document.querySelectorAll(".image");
+
+      
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].addEventListener("click", function () {
+                    console.log(slides)
+                    console.log(images)
+                    for (let j = 0; j < images.length; j++) {
+                        images[j].classList.remove("imageactive"); 
+                    }
+                    images[i].classList.add("imageactive"); 
+                   
+                });
+            }
+
+
+       
+    </script>
+</body>
+</html>
